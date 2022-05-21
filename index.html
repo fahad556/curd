@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>CURD system</title>
+</head>
+<body>
+    <!-- CURD System -->
+    <div class="w-75 mx-auto shadow-lg p-5 m-5">
+    <h1>curd system</h1>
+    <label>product name</label>
+    <input class="form-control" type="text" id="product-name" ></input>
+    <label>product category</label>
+    <input class="form-control" type="text" id="product-category"></input>
+    <label>product price</label>
+    <input class="form-control" type="text" id="product-price"></input>
+    <label>product description</label>
+    <textarea class="form-control" id="product-description"></textarea>
+    <button onclick="createProduct();" class="btn btn-primary" id="create-Btn-product">Create</button>
+    <button  class="btn btn-primary d-none" id="ubdate-Btn-product" onclick="updateProductOne()" >ubdate</button>
+    <button class="btn btn-primary" type="reset" onclick="clearForm();">clear</button>
+    </div>
+
+   <!-- search -->
+     <input id="search-input" placeholder="search" onkeyup="searchProduct();" type="search" class="form-control w-50 mx-auto"></input>
+
+
+     <!-- content cart -->
+     <table class="table w-75 mx-auto mt-3">
+         <thead>
+             <tr>
+                 <th>Index</th>
+                 <th>Name</th>
+                 <th>Category</th>
+                 <th>Price</th>
+                 <th>Description</th>
+                 <th>Ubdate</th>
+                 <th>Delete</th>
+             </tr>
+         </thead>
+         <tbody id="tbody">
+
+         </tbody>
+     </table>
+     <script src="js/app.js"></script>
+</body>
+</html>
